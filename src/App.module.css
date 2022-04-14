@@ -1,0 +1,28 @@
+.layout {
+  width: 100vw;
+  background: rgba(7, 15, 24, 0.4);
+  position: absolute;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  padding: 20px;
+  min-height: 100%;
+}
+
+.app {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.blockDisplay {
+	display: block;
+}
+
+.hiddenDisplay {
+	display: none;
+}

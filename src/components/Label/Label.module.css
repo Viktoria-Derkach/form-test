@@ -1,0 +1,19 @@
+.label {
+	margin: 0;
+	font-weight: 400;
+	display: block;
+}
+
+.s {
+	color: var(--black);
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 4px;
+}
+
+.m {
+	color: var(--gray-dark);
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,33 @@
+.input {
+	padding: 11px 16px;
+	color: var(--black);
+	border: 1px solid var(--gray-light);
+	border-radius: 10px;
+	outline-color: var(--primary);
+	background: var(--gray-white);
+	font-family: var(--font-family);
+	font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+	width: 100%;
+}
+
+.input::placeholder {
+	color: var(--gray);
+}
+
+.error {
+	border: 1px solid var(--red);
+}
+
+.inputWrapper {
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	color: var(--red);
+}
