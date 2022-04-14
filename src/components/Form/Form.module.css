@@ -56,7 +56,7 @@
 	}
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 670px) {
 	.form {
 		width: 100%;
 		transform: none;
@@ -68,16 +68,17 @@
 		top: 0;
 	}
 
-	.form {
-		width: 100%;
-		transform: none;
-	}
-
 	.submit {
 		flex-direction: column;
 	}
 
 	.formContent {
 		width: 80%;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.formTitle {
+		font-size: 16px;
 	}
 }
