@@ -2,12 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { Button } from "../Button/Button";
-import { Devider } from "../Devider/Devider";
-import { Input } from "../Input/Input";
-import { Label } from "../Label/Label";
-import { SelectPayment } from "../SelectPayment/SelectPayment";
-import { Textarea } from "../Textarea/Textarea";
+import { Button, Devider, Input, Label, SelectPayment, Textarea } from "..";
 import { ReactComponent as CloseIcon } from "./close.svg";
 import { IReviewForm } from "./Form.interface";
 import styles from "./Form.module.css";
@@ -44,14 +39,17 @@ export const Form = ({
     resolver: yupResolver(FormSchema),
   });
 
-  const onSubmit = async (formData: IReviewForm) => {
-    try {
+  const onSubmit = (formData: IReviewForm) => {
+    if (formData) {
       console.log(formData);
       setIsOpened(false);
       reset();
-    } catch (e) {
-      console.error(e);
+      clearErrors();
     }
+  };
+
+  const closeForm = () => {
+    setIsOpened(false);
   };
 
   return (
@@ -62,7 +60,7 @@ export const Form = ({
           <button
             aria-label="Close the form"
             className={styles.close}
-            onClick={() => setIsOpened(false)}
+            onClick={closeForm}
           >
             <CloseIcon />
           </button>
@@ -103,14 +101,10 @@ export const Form = ({
 
         <Devider />
         <div className={styles.submit}>
-          <Button appearance="white" onClick={() => setIsOpened(false)}>
+          <Button appearance="white" onClick={closeForm}>
             Cancel
           </Button>
-          <Button
-            type="submit"
-            appearance="primary"
-            onClick={() => clearErrors()}
-          >
+          <Button type="submit" appearance="primary">
             Create
           </Button>
         </div>
