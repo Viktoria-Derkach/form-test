@@ -26,3 +26,9 @@
 .hiddenDisplay {
 	display: none;
 }
+
+@media screen and (max-width: 640px) {
+	.layout {
+    padding: 0px;
+  }
+}

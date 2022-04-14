@@ -13,16 +13,16 @@ import { IReviewForm } from "./Form.interface";
 import styles from "./Form.module.css";
 import { FormProps } from "./Form.props";
 
-const phoneRegExp = /^[1-9]\d?-\d{7}$|^\s*$/;
+const einReg = /^[1-9]\d?-\d{7}$|^\s*$/;
 
 const FormSchema = yup.object().shape({
   name: yup
     .string()
     .min(2, "Must be bigger than one letter")
-    .max(20, "Must be shorted")
+    .max(20, "Must be shorter")
     .required("Enter a name"),
-  EIN: yup.string().matches(phoneRegExp, "EIN is not valid"),
-  notes: yup.string().max(200, "Must be shorted"),
+  EIN: yup.string().matches(einReg, "EIN is not valid"),
+  notes: yup.string().max(200, "Must be shorter"),
 });
 
 export const Form = ({

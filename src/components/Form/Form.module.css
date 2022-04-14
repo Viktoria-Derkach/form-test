@@ -37,18 +37,6 @@
 	padding-bottom: 40px;
 }
 
-.success {
-	background: var(--green-light);
-}
-
-.error {
-	background: var(--red-light);
-}
-
-.successTitle {
-	font-weight: bold;
-}
-
 .close {
 	position: absolute;
 	top: 20px;
@@ -75,7 +63,7 @@
 	}
 }
 
-@media screen and (max-width: 502px) {
+@media screen and (max-width: 503px) {
 	.formWrapper {
 		top: 0;
 	}
